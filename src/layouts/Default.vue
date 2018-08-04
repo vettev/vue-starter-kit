@@ -24,7 +24,4 @@ export default {
 };
 </script>
 <style lang="scss">
-    .layout {
-        color: $text-muted;
-    }
 </style>
