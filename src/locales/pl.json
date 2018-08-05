@@ -1,5 +1,5 @@
 {
   "message": "hello i18n !!",
   "error_unexpected": "Wystąpił nieoczekiwany błąd.",
-  "error_session_expired": "Sesja wygasła, zaloguj się ponownie.",
+  "error_session_expired": "Sesja wygasła, zaloguj się ponownie."
 }
