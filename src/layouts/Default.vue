@@ -1,5 +1,8 @@
 <template>
-    <div class="layout">
+    <div class="layout layout-default">
+        <div class="content">
+            <router-view />
+        </div>
         <loader v-if="isLoading" />
     </div>
 </template>
@@ -16,6 +19,12 @@ export default {
         ...mapGetters([
             'isLoading',
         ]),
+    },
+    mounted() {
+        this.$message({
+            message: 'Test, this is a success message.',
+            type: 'success',
+        });
     },
 };
 </script>
