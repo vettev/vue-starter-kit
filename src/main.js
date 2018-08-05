@@ -7,8 +7,6 @@ import i18n from './i18n';
 
 import {Message} from 'element-ui';
 
-Vue.use(Message);
-
 Vue.prototype.$message = Message;
 
 Vue.config.productionTip = false;
