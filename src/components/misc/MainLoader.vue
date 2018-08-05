@@ -18,6 +18,7 @@
         width: 100%;
         height: 100%;
         background: $loader-bg;
+        z-index: $zindex-complete-overlay;
 
         .loader {
             .circle {

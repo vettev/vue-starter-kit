@@ -20,12 +20,6 @@ export default {
             'isLoading',
         ]),
     },
-    mounted() {
-        this.$message({
-            message: 'Test, this is a success message.',
-            type: 'success',
-        });
-    },
 };
 </script>
 <style lang="scss">

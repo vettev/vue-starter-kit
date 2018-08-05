@@ -36,9 +36,17 @@ _axios.interceptors.response.use(
         return response;
     },
     function (error) {
-        if(error.code === 500) {
-            //TODO UNEXPECTED ERROR HANDLE
-
+        if (error.code === 500) {
+            Vue.$message({
+                message: Vue.$t('error_unexpected'),
+                type: 'error',
+            });
+        }
+        if (error.code === 401) {
+            Vue.$message({
+                message: Vue.$t('error_session_expired'),
+                type: 'error',
+            });
         }
         console.log(error);
 
