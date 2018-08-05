@@ -1,9 +1,5 @@
 <template>
     <div class="layout">
-        <div class="row">
-            <div class="col-6">test1</div>
-            <div class="col-6">test2</div>
-        </div>
         <loader v-if="isLoading" />
     </div>
 </template>
