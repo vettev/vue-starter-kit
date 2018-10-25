@@ -5,25 +5,24 @@
 </template>
 
 <script>
+    import DefaultLayout from '@/layouts/DefaultLayout.vue';
 
-import DefaultLayout from '@/layouts/Default.vue';
-
-export default {
-    components: {
-        'app-layout': DefaultLayout,
-    },
-    created() {
-        this.$store.commit('enableLoading');
-    },
-    mounted() {
-        setTimeout(() => {
-            this.$store.commit('disableLoading');
-        }, 500);
-    },
-};
+    export default {
+        components: {
+            'app-layout': DefaultLayout,
+        },
+        created() {
+            this.$store.commit('enableLoading');
+        },
+        mounted() {
+            setTimeout(() => {
+                this.$store.commit('disableLoading');
+            }, 500);
+        },
+    };
 
 </script>
 
 <style lang="scss">
-    @import '../scss/style';
+@import '../scss/style';
 </style>
