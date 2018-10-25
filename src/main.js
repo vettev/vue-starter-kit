@@ -1,5 +1,6 @@
 import Vue from 'vue';
 
+import './bootstrap/logging';
 import i18n from './bootstrap/i18n';
 import './bootstrap/axios';
 import './bootstrap/components';
