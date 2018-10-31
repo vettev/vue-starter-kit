@@ -1,11 +1,26 @@
-import Home from '@/views/Home.vue';
+import Home from '@/views/Home';
+import Login from '@/views/auth/Login';
+import Register from '@/views/auth/Register';
 
 export default [
     {
         path: '/',
         name: 'home',
         component: Home,
+        meta: {
+            authRequired: true
+        }
     },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: Register
+    }
     // {
     //     path: '/about',
     //     name: 'about',

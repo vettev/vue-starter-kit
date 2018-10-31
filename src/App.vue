@@ -1,24 +1,23 @@
 <template>
     <div id="app">
-        <app-layout />
+        <default-layout v-if="isUserLogged" />
+        <auth-layout v-else />
     </div>
 </template>
 
 <script>
     import DefaultLayout from '@/layouts/DefaultLayout.vue';
+    import AuthLayout from '@/layouts/AuthLayout.vue';
+    import { mapGetters } from 'vuex';
 
     export default {
         components: {
-            'app-layout': DefaultLayout,
+            DefaultLayout,
+            AuthLayout
         },
-        created() {
-            this.$store.commit('enableLoading');
-        },
-        mounted() {
-            setTimeout(() => {
-                this.$store.commit('disableLoading');
-            }, 500);
-        },
+        computed: {
+            ...mapGetters(['isUserLogged'])
+        }
     };
 
 </script>

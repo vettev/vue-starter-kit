@@ -1,6 +1,7 @@
 <template>
     <div class="layout layout-default">
         <div class="content">
+            auth
             <router-view />
         </div>
         <loader v-if="isLoading" />
